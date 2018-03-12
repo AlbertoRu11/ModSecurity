@@ -1700,8 +1700,10 @@ expression:
 */
     | CONFIG_SEC_COLLECTION_TIMEOUT
       {
+/* Parser error disabled to avoid breaking default CRS installations with crs-setup.conf-recommended
         driver.error(@0, "SecCollectionTimeout is not yet supported.");
         YYERROR;
+*/
       }
     | CONFIG_SEC_HTTP_BLKEY
       {
